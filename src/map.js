@@ -9,7 +9,7 @@ import { Vector as VectorSource } from 'ol/source';
 import { Draw } from 'ol/interaction';
 import { Circle as CircleStyle, Fill, Stroke, Style } from 'ol/style';
 import { getArea, getLength } from 'ol/sphere';
-
+import './App.css'
 const MapComponent = () => {
   const mapRef = useRef(null);
   const drawLayer = useRef(null); // Ref for draw layer
@@ -99,7 +99,7 @@ const MapComponent = () => {
 
   return (
     <div>
-      <div ref={mapRef} style={{ width: '100%', height: '400px' }}></div>
+      <div ref={mapRef} className='map-container'></div>
       <div>
         <h2>Drawings:</h2>
         <div>
